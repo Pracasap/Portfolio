@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: 'BillionDreams';
+    src:
+        local('BillionDreams'),
+        url(./fonts/BillionDreams.ttf) format('truetype');
+    }
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato' !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    color: #fff;
+    font-size: 80px !important;
+    font-family: 'Kaushan Script';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+    color: #fff;
+    font-size: 40px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h4 {
+    color: rgb(254, 189, 107);
+    font-size: 30px !important;
 }
 
-.App-link {
-  color: #61dafb;
+h5 {
+    color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.NavbarBrand {
+    font-weight: 700;
+    font-family: 'Kaushan Script' !important;
+}
+
+.nav-bar {
+    background-color: rgb(28, 31, 45);
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    background-color: rgb(28, 31, 45);;
+    align-content: center;
+    justify-content: center;
+    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/src/images/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.site-footer {
+    background-color: rgb(28, 31, 45); 
+    display: grid;
+    align-content: center;
+    height: 80px;
 }
