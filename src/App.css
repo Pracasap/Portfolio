@@ -1,22 +1,22 @@
-@font-face {
-    font-family: 'BillionDreams';
-    src:
-        local('BillionDreams'),
-        url(./fonts/BillionDreams.ttf) format('truetype');
-    }
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 body {
     margin: 0;
-    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: 'Lato' !important;
 }
 
 h1 {
     color: #fff;
     font-size: 80px !important;
+    font-family: 'Kaushan Script';
+}
+
+h2 {
+    color: #fff;
+    font-size: 60px !important;
     font-family: 'Kaushan Script';
 }
 
@@ -27,15 +27,22 @@ h3 {
 
 h4 {
     color: rgb(254, 189, 107);
-    font-size: 30px !important;
+    font-size: 23px !important;
 }
 
-h5 {
+h5, h6 {
     color: #fff;
 }
 
+p {
+    color: rgb(255, 255, 255) !important;
+    width: 56%;
+    font-size: 20px;
+}
+
 .NavbarBrand {
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 35px;
     font-family: 'Kaushan Script' !important;
 }
 
@@ -44,7 +51,7 @@ h5 {
 }
 
 .nav-link {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .home {
@@ -53,16 +60,62 @@ h5 {
     display: grid;
     background-color: rgb(28, 31, 45);;
     align-content: center;
-    justify-content: center;
-    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(/src/images/background.jpeg);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
 }
 
+.projects {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    background-color: rgb(28, 31, 45);;
+    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.social-links {
+    font-size: 25px;
+}
+
+.card-img-overlay .card-title {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-left: 5px;
+    font-size: 20px;
+}
+
+.row-content {
+    padding: 50px 0px;
+    align-content: center;
+    justify-content: center;
+}
+
 .site-footer {
-    background-color: rgb(28, 31, 45); 
+    background-color: rgb(41, 45, 72); 
     display: grid;
     align-content: center;
-    height: 80px;
+    min-height: 80px;
+}
+
+@media screen and (max-width: 880px) {
+    p {
+        color: rgb(255, 255, 255) !important;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    h4 {
+        color: rgb(254, 189, 107);
+        font-size: 20px !important;
+    }
 }

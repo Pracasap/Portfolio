@@ -22,25 +22,25 @@ class Header extends Component {
     render() {
         return (
             <React.Fragment>
-                <Navbar dark stick="top" expand="md" className="nav-bar">  
+                <Navbar dark sticky="top" expand="md" className="nav-bar">  
                     <div className="container">  
-                    <NavbarBrand href="/" className="NavbarBrand">P S</NavbarBrand> 
+                    <NavbarBrand href="/" className="NavbarBrand">Prakash.com</NavbarBrand> 
                     <NavbarToggler onClick={this.toggleNav} />
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav navbar className="ml-5">
                             <NavItem>
                                 <NavLink className="nav-link mr-4" to="/home">
-                                    Home
+                                <ion-icon name="home" />  &nbsp;Home
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link mr-4" to="/projects">
-                                    Projects
+                                <ion-icon name="file-tray" /> &nbsp;Projects
                                 </NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link" to="/contact">
-                                    Contact
+                                <ion-icon name="call" /> &nbsp;Contact
                                 </NavLink>
                             </NavItem>
                         </Nav>
