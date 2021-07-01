@@ -6,21 +6,21 @@ function Footer(props) {
         <footer className="site-footer p-4">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-6 copyright">
                         <h6>© 2021 Coppyrights Prakash.com</h6>
                     </div>
-                    <div class="col-md-6 text-center social-links">
-                        <a href="http://github.com/pracasap" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                        </a>&#8194;
+                    <div class="col-md-6 social-links">
                         <a href="https://www.linkedin.com/in/prakashsapkota7/" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-linkedin"></ion-icon>
+                        <ion-icon name="logo-linkedin" />
                         </a>&#8194;
-                        <a href="http://facebook.com/" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-facebook"></ion-icon>
+                        <a href="http://github.com/pracasap" target="_blank" rel="noreferrer">
+                        <ion-icon name="logo-github" />
                         </a>&#8194;
-                        <a href="http://twitter.com/" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-twitter"></ion-icon>
+                        <a href="mailto:optimistic.prakash@gmail.com" target="_blank" rel="noreferrer">
+                        <ion-icon name="mail" />
+                        </a>&#8194;
+                        <a href="http://twitter.com/enceder_" target="_blank" rel="noreferrer">
+                        <ion-icon name="logo-twitter" />
                         </a>&#8194;
                     </div>
                 </div>

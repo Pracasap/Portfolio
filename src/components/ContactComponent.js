@@ -2,26 +2,63 @@ import React from "react";
 
 function Contact(props) {
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col">
-                    <h2>Contact Us</h2>
-                    <hr />
+        <div className="container-fluid projects">
+            <div className="container mb-5">
+                <div className="row">
+                    <div className="col mt-5 mb-3">
+                        <h2>Get In Touch</h2>
+                        
+                    </div>
                 </div>
-            </div>
-
-            <div className="row row-content align-items-center">
-                <div className="col-sm-4">
-                    <h5>Our Address</h5>
-                    <address>
-                        1 Nucamp Way<br />
-                        Seattle, WA 98001<br />
-                        U.S.A.
-                    </address>
-                </div>
-                <div className="col">
-                    <a role="button" className="btn btn-link" href="tel:+12065551234"><i className="fa fa-phone" /> 1-206-555-1234</a><br />
-                    <a role="button" className="btn btn-link" href="mailto:fakeemail@fakeemail.co"><i className="fa fa-envelope-o" /> campsites@nucamp.co</a>
+                <div className="row" style={{backgroundColor: '#f1f1f1'}}>
+                    <div class="col m-sm-5">
+                        <form method="POST" action="#" id="contactUsForm">
+                            <div class="form-group row">
+                                <div class="col-lg-2 col-form-label">
+                                    <label for="contactFirstName" class="form-label">First Name</label>
+                                </div>
+                                <div class="col-lg-10">
+                                    <input id="contactFirstName" name="contactName" placeholder="First Name" type="text"
+                                        class="form-control form-control-lg" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-2 col-form-label">
+                                    <label for="contactLastName" class="form-label">Last Name</label>
+                                </div>
+                                <div class="col-lg-10">
+                                    <input id="contactLastName" name="contactLastName" placeholder="Last Name" type="text"
+                                        class="form-control form-control-lg" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-2 col-form-label">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                </div>
+                                <div class="col-lg-10">
+                                    <input id="contactEmail" name="contactEmail" placeholder="Email@email.com" type="email"
+                                        class="form-control form-control-lg" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-2 col-form-label">
+                                    <label for="contactMessage" class="form-label">Message</label>
+                                </div>
+                                <div class="col-lg-10">
+                                    <textarea id="contactMessage" class="form-control form-control-lg" rows="5"
+                                        placeholder="Your Message" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-2 col-form-label">
+                                </div>
+                                <div class="col-lg-10">
+                                    <button class="btn btn-primary btn-lg mr-1" type="submit">Send</button>
+                                    <button class="btn btn-primary btn-lg" type="reset">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

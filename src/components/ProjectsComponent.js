@@ -1,14 +1,21 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
+// import { Link } from 'react-router-dom';
 
 function RenderProjects({project}) {
     return (
-        <Card>
+        <Card className="shadow">
             {/* <Link to {`/project/${project.id}`}> */}
-                <CardImg width="100%" src={project.image} alt={project.name} />
-                <CardImgOverlay>
-                    <CardTitle>{project.name}</CardTitle>
-                </CardImgOverlay>
+            <div className="card-img-div"><img width="100%" src={project.image} alt={project.name} /></div>
+            <CardBody>
+            <CardTitle>{project.name}</CardTitle>
+            <CardText>{project.description}</CardText>
+            <div className="card-icon">
+                <a href={project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>&#8194;
+                <a href={project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>&#8194;
+                <a href={project.codepen} target="_blank" rel="noreferrer"><ion-icon name="logo-codepen" /></a>&#8194;
+            </div>
+            </CardBody>
             {/* </Link> */}
         </Card>
     )
@@ -18,7 +25,7 @@ function Projects(props) {
 
     const project = props.projects.map(project => {
         return (
-            <div key={project.id} className="col-md-5 m-2">
+            <div key={project.id} className="col-md-6 p-3">
                 <RenderProjects project={project} />
             </div>
         );
@@ -28,7 +35,7 @@ function Projects(props) {
         <div className="container-fluid projects">
             <div className="container mb-5">
                 <div className="row">
-                    <div className="col mt-5 mb-4">
+                    <div className="col mt-5 mb-3">
                         <h2>Projects</h2>
                     </div>
                 </div>
