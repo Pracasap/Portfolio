@@ -14,7 +14,7 @@ export const PROJECTS = [
         image: "assets/images/nucamp.png",
         website: false,
         github: "https://github.com/Pracasap/React-Nucamp",
-        description: "NuCamp is a webpage I build with React when I was in the Nucamp Bootcamp. I learned about React, Reactstrap, Single Page Applications(SPA), React Router, Redux, etc. It was challenging but I know that is where the growth is."
+        description: "NuCamp is a webpage I build with React when I was in the Nucamp Bootcamp. I learned about React, Reactstrap, Single Page Applications(SPA), React Router, Redux, etc. It was challenging but I knew that is where the growth was."
     },
     {
         id: 2,
@@ -41,7 +41,7 @@ export const PROJECTS = [
         website: "https://codepen.io/prakash-sapkota/pen/WNGXaYO",
         github: false,
         codepen: "https://codepen.io/prakash-sapkota/pen/WNGXaYO",
-        description: "This project taught me that a simple webpage like this can look great. It had very basic colors yet looked awesome. I also got to learn how to make containers and cards using CSS. Furthermore, I learned about grid and flexbox in CSS."
+        description: "This project taught me that a simple webpage like this can look great. It has very basic colors yet looks awesome. I also got to learn how to make containers and cards using CSS. Furthermore, I learned about grid and flexbox on CSS."
     },
     {
         id: 5,
