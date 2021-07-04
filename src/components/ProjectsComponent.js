@@ -1,22 +1,47 @@
 import React from 'react';
 import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
-// import { Link } from 'react-router-dom';
+
+function RenderIcons(prop) {
+    if (prop.project.website && prop.project.github) {
+        return (
+            <div>
+                <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>&#8194;
+                <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
+            </div>
+        )
+    } else if (prop.project.website && !prop.project.github) {
+        return (
+            <div>
+                <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>
+            </div>
+        )
+    } else if (!prop.project.website && prop.project.github) {
+        return (
+            <div>
+                <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
+            </div>
+        )
+    }
+    else {
+        return <div />
+    }
+}
 
 function RenderProjects({project}) {
+
     return (
         <Card className="shadow">
-            {/* <Link to {`/project/${project.id}`}> */}
-            <div className="card-img-div"><img width="100%" src={project.image} alt={project.name} /></div>
+            <div className="card-img-div">
+                <a href={project.website} target="_blank" rel="noreferrer"><img width="100%" src={project.image} alt={project.name} /></a>
+            </div>
             <CardBody>
             <CardTitle>{project.name}</CardTitle>
             <CardText>{project.description}</CardText>
+            <hr />
             <div className="card-icon">
-                <a href={project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>&#8194;
-                <a href={project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>&#8194;
-                <a href={project.codepen} target="_blank" rel="noreferrer"><ion-icon name="logo-codepen" /></a>&#8194;
+            <RenderIcons project={project} />
             </div>
             </CardBody>
-            {/* </Link> */}
         </Card>
     )
 }

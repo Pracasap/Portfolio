@@ -11,16 +11,16 @@ function Footer(props) {
                     </div>
                     <div class="col-md-6 social-links">
                         <a href="https://www.linkedin.com/in/prakashsapkota7/" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-linkedin" />
+                        <span className="footer-icon"><ion-icon name="logo-linkedin" /></span>
                         </a>&#8194;
                         <a href="http://github.com/pracasap" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-github" />
+                        <span className="footer-icon"><ion-icon name="logo-github" /></span>
                         </a>&#8194;
                         <a href="mailto:optimistic.prakash@gmail.com" target="_blank" rel="noreferrer">
-                        <ion-icon name="mail" />
+                        <span className="footer-icon"><ion-icon name="mail" /></span>
                         </a>&#8194;
                         <a href="http://twitter.com/enceder_" target="_blank" rel="noreferrer">
-                        <ion-icon name="logo-twitter" />
+                        <span className="footer-icon"><ion-icon name="logo-twitter" /></span>
                         </a>&#8194;
                     </div>
                 </div>

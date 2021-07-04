@@ -40,6 +40,7 @@ p {
     font-size: 20px;
 }
 
+/* Navbar */
 .NavbarBrand {
     font-weight: 500;
     font-size: 35px;
@@ -53,6 +54,55 @@ p {
 .nav-link {
     font-weight: 600;
 }
+
+/* Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 0px !important;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; }
+
+.btn-full,
+.btn-full:link,
+.btn-full:visited,
+button[type=submit],
+button[type=reset] {
+    background-color: #003366 !important;
+    border: 1px solid #003366  !important;
+    border-radius: 0 !important;
+    color: #fff !important; }
+
+.btn-ghost,
+.btn-ghost:link,
+.btn-ghost:visited {
+    background-color: transparent !important;
+    border: 1px solid rgb(254, 189, 107) !important;
+    border-radius: 0 !important;
+    color: #fff !important; }
+
+.btn:hover,
+.btn:active,
+button[type=submit]:hover,
+button[type=submit]:active,
+button[type=reset]:active  {
+    background-color: rgb(69, 94, 254) !important;
+    color: #fff !important; }
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid rgb(69, 94, 254) !important; }
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: rgb(254, 189, 107) !important;
+    border: 1px solid rgb(254, 189, 107) !important;
+    color: #000 !important; }
+
 
 .home {
     height: 100vh;
@@ -129,6 +179,11 @@ p {
     font-size: 22px;
 }
 
+.footer-icon {
+    color: #fff !important;
+}
+
+/* Footer */
 .site-footer {
     background-color: rgb(41, 45, 72); 
     display: grid;

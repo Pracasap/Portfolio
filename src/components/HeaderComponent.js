@@ -44,20 +44,6 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                             </Nav>
-                            <div class="col navbar-social-links">
-                                <a href="https://www.linkedin.com/in/prakashsapkota7/" target="_blank" rel="noreferrer">
-                                <ion-icon name="logo-linkedin" />
-                                </a>&#8194;
-                                <a href="http://github.com/pracasap" target="_blank" rel="noreferrer">
-                                <ion-icon name="logo-github" />
-                                </a>&#8194;
-                                <a href="mailto:optimistic.prakash@gmail.com" target="_blank" rel="noreferrer">
-                                <ion-icon name="mail" />
-                                </a>&#8194;
-                                <a href="http://twitter.com/enceder_" target="_blank" rel="noreferrer">
-                                <ion-icon name="logo-twitter" />
-                                </a>&#8194;
-                            </div>
                         </Collapse> 
                     </div>  
                 </Navbar> 
