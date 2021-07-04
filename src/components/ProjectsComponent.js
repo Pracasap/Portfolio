@@ -2,30 +2,50 @@ import React from 'react';
 import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
 
 function RenderIcons(prop) {
-    if (prop.project.website && prop.project.github) {
-        return (
-            <div>
-                <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>&#8194;
-                <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
-            </div>
-        )
-    } else if (prop.project.website && !prop.project.github) {
-        return (
-            <div>
-                <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>
-            </div>
-        )
-    } else if (!prop.project.website && prop.project.github) {
-        return (
-            <div>
-                <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
-            </div>
-        )
+    let weblinks = [];
+    if (prop.project.website) {
+        const websiteLink = <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>;
+        weblinks.push(websiteLink);
+        weblinks.push(" ");
     }
-    else {
-        return <div />
+    if (prop.project.github) {
+        const githubLink = <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>;
+        weblinks.push(githubLink);
+        weblinks.push(" ");
     }
+    if (prop.project.codepen) {
+        const codepenLink = <a href={prop.project.codepen} target="_blank" rel="noreferrer"><ion-icon name="logo-codepen" /></a>;
+        weblinks.push(codepenLink);
+        weblinks.push(" ");
+    }
+    return weblinks;
 }
+
+// function RenderIcons(prop) {
+//     if (prop.project.website && prop.project.github) {
+//         return (
+//             <div>
+//                 <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>&#8194;
+//                 <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
+//             </div>
+//         )
+//     } else if (prop.project.website && !prop.project.github) {
+//         return (
+//             <div>
+//                 <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>
+//             </div>
+//         )
+//     } else if (!prop.project.website && prop.project.github) {
+//         return (
+//             <div>
+//                 <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
+//             </div>
+//         )
+//     }
+//     else {
+//         return <div />
+//     }
+// }
 
 function RenderProjects({project}) {
 
