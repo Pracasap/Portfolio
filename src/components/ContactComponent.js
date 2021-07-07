@@ -94,7 +94,7 @@ class Contact extends Component {
                             <h2>Get In Touch</h2>
                         </div>
                     </div>
-                    <div className="row" style={{backgroundColor: '#f1f1f1'}}>
+                    <div className="row row-content" style={{backgroundColor: '#f1f1f1'}}>
                         <div className="col m-sm-5">
                             <Form onSubmit={this.handleSubmit} id="contactForm">
                                 <FormGroup row>
