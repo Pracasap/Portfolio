@@ -128,7 +128,7 @@ class Contact extends Component {
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                    <Label htmlFor="email" class="form-label" lg={2}>Email</Label>
+                                    <Label htmlFor="email" className="form-label" lg={2}>Email</Label>
                                     <Col>
                                     <Input type="email" id="email" name="email"
                                         className="form-control form-control-lg" 

@@ -4,12 +4,12 @@ import React from 'react';
 function Footer(props) {
     return (
         <footer className="site-footer p-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 copyright">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6 copyright">
                         <h6>© 2021 Coppyrights Prakash.com</h6>
                     </div>
-                    <div class="col-md-6 social-links">
+                    <div className="col-md-6 social-links">
                         <a href="https://www.linkedin.com/in/prakashsapkota7/" target="_blank" rel="noreferrer">
                         <span className="footer-icon"><ion-icon name="logo-linkedin" /></span>
                         </a>&#8194;

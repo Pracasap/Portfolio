@@ -34,9 +34,9 @@ h5, h6 {
     color: #fff;
 }
 
-p {
+.homeParagraph {
     color: rgb(255, 255, 255);
-    width: 56%;
+    width: 52%;
     font-size: 20px;
 }
 
@@ -90,12 +90,12 @@ button[type=reset] {
 button[type=submit]:hover,
 button[type=submit]:active,
 button[type=reset]:active  {
-    background-color: rgb(69, 94, 254) !important;
-    color: #fff !important; }
+    background-color: rgb(254, 189, 107) !important;
+    color: #000 !important; }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid rgb(69, 94, 254) !important; }
+    border: 1px solid rgb(254, 189, 107) !important; }
 
 .btn-ghost:hover,
 .btn-ghost:active {
@@ -105,7 +105,7 @@ button[type=reset]:active  {
 
 
 .home {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: grid;
     background-color: rgb(28, 31, 45);;
@@ -173,34 +173,39 @@ button[type=reset]:active  {
 
 .copyright {
     text-align: left;
+    display: grid !important;
+    align-content: center !important;
 }
 
 .form-label {
-    font-size: 22px;
+    font-size: 22px !important;
+}
+
+/* Footer */
+.site-footer {
+    background-color: rgb(41, 45, 72); 
 }
 
 .footer-icon {
     color: #fff !important;
 }
 
-/* Footer */
-.site-footer {
-    background-color: rgb(41, 45, 72); 
-    display: grid;
-    align-content: center;
-    min-height: 80px;
-}
-
-@media screen and (max-width: 880px) {
-    p {
+@media screen and (max-width: 980px) {
+    .homeParagraph {
         color: rgb(255, 255, 255) !important;
-        width: 100%;
-        font-size: 20px;
+        width: 90% !important;
+        font-size: 18px;
+    }
+
+    h1 {
+        color: #fff;
+        font-size: 60px !important;
+        font-family: 'Kaushan Script';
     }
 
     h4 {
         color: rgb(254, 189, 107);
-        font-size: 20px !important;
+        font-size: 18px !important;
     }
     .copyright {
         text-align: center;
