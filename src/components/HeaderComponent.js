@@ -24,7 +24,7 @@ class Header extends Component {
             <React.Fragment>
                 <Navbar dark sticky="top" expand="md" className="nav-bar">  
                     <div className="container">  
-                        <NavbarBrand href="/" className="NavbarBrand"><ion-icon name="leaf" /> P S</NavbarBrand> 
+                        <NavbarBrand href="/" className="NavbarBrand font-weight-bold"><ion-icon name="leaf" /> P S</NavbarBrand> 
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar className="ml-5">

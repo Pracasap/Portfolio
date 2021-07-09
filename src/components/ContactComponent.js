@@ -36,6 +36,7 @@ class Contact extends Component {
         console.log("Current state is: " + JSON.stringify(this.state));
         alert("Current state is: " + JSON.stringify(this.state));
         event.preventDefault();
+        
     }
 
     validate(firstName, lastName, email, message) {
@@ -94,11 +95,11 @@ class Contact extends Component {
                             <h2>Get In Touch</h2>
                         </div>
                     </div>
-                    <div className="row row-content" style={{backgroundColor: '#f1f1f1'}}>
-                        <div className="col m-sm-5">
+                    <div className="row" style={{backgroundColor: '#f1f1f1'}}>
+                        <div className="col m-4">
                             <Form onSubmit={this.handleSubmit} id="contactForm">
                                 <FormGroup row>
-                                    <Label htmlFor="lastName" className="form-label" lg={2}>First Name</Label>
+                                    <Label htmlFor="firstName" className="form-label" lg={2}>First Name</Label>
                                     <Col>
                                         <Input type="text" id="firstName" 
                                         className="form-control form-control-lg" 
@@ -155,9 +156,9 @@ class Contact extends Component {
                                     </Col>
                                 </FormGroup>
                                 <FormGroup row>
-                                    <Col className="col-lg-2 col-form-label">
+                                    <Col className="col-lg-2 d-none d-lg-block">
                                     </Col>
-                                    <Col className="col-lg-10">
+                                    <Col className="col col-lg-10">
                                         <Button className="btn btn-full btn-lg mr-2" type="submit">Send</Button>
                                     </Col>
                                 </FormGroup>

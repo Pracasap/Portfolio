@@ -138,11 +138,6 @@ button[type=reset]:active  {
     text-align: right;
 }
 
-.navbar-social-links {
-    font-size: 25px;
-    text-align: right !important;
-}
-
 .card-icon {
     font-size: 30px;
 }

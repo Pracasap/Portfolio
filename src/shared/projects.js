@@ -33,7 +33,7 @@ export const PROJECTS = [
         website: false,
         github: false,
         codepen: "https://codepen.io/prakash-sapkota/pen/rNMYxYj",
-        description: "Survery Form is a webpage I built when I was learning about forms on Freecodecamp.org. It was a small project, yet I got to learn about background image, opacity, different form tags and attributes while having a lot of fun on top of that."
+        description: "Survery Form is a webpage I built when I was learning about forms. It was a small project, yet I got to learn about background image, opacity, different form tags and attributes while having a lot of fun on top of that."
     },
     {
         id: 4,
