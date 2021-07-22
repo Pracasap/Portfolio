@@ -7,7 +7,7 @@ function Home() {
         <div className="container-fluid home">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md-12 pt-4 pt-sm-4">
                         <h1>Hi, I am Prakash!</h1>
                         
                         <h4>I CREATE BEAUTIFUL AND RESPONSIVE WEBSITES</h4><br></br>

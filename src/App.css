@@ -101,7 +101,7 @@ button[type=reset]:active  {
 .btn-ghost:active {
     background-color: rgb(254, 189, 107) !important;
     border: 1px solid rgb(254, 189, 107) !important;
-    color: #000 !important; }
+    color: rgba(0, 0, 0, 0.188) !important; }
 
 
 .home {
@@ -212,5 +212,27 @@ button[type=reset]:active  {
     }
     .navbar-social-links {
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home {
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        background-color: rgb(28, 31, 45);;
+        align-content:flex-start;
+        background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
+        background-attachment: fixed;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    .homeParagraph {
+        color: rgb(255, 255, 255) !important;
+        width: 100% !important;
+        font-size: 18px;
     }
 }
