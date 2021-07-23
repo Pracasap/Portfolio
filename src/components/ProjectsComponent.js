@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardBody, CardText, CardTitle } from 'reactstrap';
+import { Loading } from './LoadingComponent';
 
 function RenderIcons(prop) {
     let weblinks = [];
@@ -47,8 +48,13 @@ function RenderIcons(prop) {
 //     }
 // }
 
-function RenderProjects({project}) {
-
+function RenderProjects({project, isLoading, errMess}) {
+    if (isLoading) {
+        return <Loading />;
+    }
+    if (errMess) {
+        return <h4>{errMess}</h4>
+    }
     return (
         <Card className="shadow">
             <div className="card-img-div">
@@ -71,7 +77,11 @@ function Projects(props) {
     const project = props.projects.map(project => {
         return (
             <div key={project.id} className="col-md-6 p-3">
-                <RenderProjects project={project} />
+                <RenderProjects 
+                    project={project}
+                    isLoading={props.projectsLoading}
+                    errMess={props.projectsErrMess} 
+                />
             </div>
         );
     });

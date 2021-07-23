@@ -6,6 +6,7 @@ import Contact from './ContactComponent';
 import Footer from './FooterComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { fetchProjects } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
@@ -13,7 +14,15 @@ const mapStateToProps = state => {
     }
 }
 
+const mapDispatchToProps = {
+    fetchProjects: () => (fetchProjects())
+};
+
 class Main extends Component {
+
+    componentDidMount() {
+        this.props.fetchProjects();
+    }
 
     render() { 
         return (  
@@ -21,7 +30,10 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path='/home' component={Home} />
-                    <Route exact path='/projects' render={() => <Projects projects={this.props.projects} />} />
+                    <Route exact path='/projects' render={() => <Projects projects={this.props.projects.projects}
+                    projectsLoading={this.props.projects.isLoading}
+                    projectsErrMess={this.props.projects.errMess}
+                    />} />
                     <Route exact path='/contact' component={Contact} />
                     <Redirect to='/home' />
                 </Switch>
@@ -31,4 +43,4 @@ class Main extends Component {
     };
 } 
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
