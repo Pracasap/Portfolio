@@ -43,8 +43,8 @@ class Contact extends Component {
                             <h2>Get In Touch</h2>
                         </div>
                     </div>
-                    <div className="row" style={{backgroundColor: '#f1f1f1'}}>
-                        <div className="col m-4">
+                    <div className="row" style={{backgroundColor: '#f1f1f1', borderRadius: 4}}>
+                        <div className="col m-3 m-sm-4 m-lg-5">
                             <Form model="messageForm" onSubmit={values => this.handleSubmit(values)} id="contactForm">
                                 <Row className="form-group">
                                     <Label htmlFor="firstName" className="form-label" lg={2}>First Name</Label>

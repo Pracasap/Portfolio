@@ -22,32 +22,6 @@ function RenderIcons(prop) {
     return weblinks;
 }
 
-// function RenderIcons(prop) {
-//     if (prop.project.website && prop.project.github) {
-//         return (
-//             <div>
-//                 <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>&#8194;
-//                 <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
-//             </div>
-//         )
-//     } else if (prop.project.website && !prop.project.github) {
-//         return (
-//             <div>
-//                 <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>
-//             </div>
-//         )
-//     } else if (!prop.project.website && prop.project.github) {
-//         return (
-//             <div>
-//                 <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>
-//             </div>
-//         )
-//     }
-//     else {
-//         return <div />
-//     }
-// }
-
 function RenderProjects({project, isLoading, errMess}) {
     if (isLoading) {
         return <Loading />;
@@ -94,7 +68,7 @@ function Projects(props) {
                         <h2>Projects</h2>
                     </div>
                 </div>
-                <div className="row row-content" style={{backgroundColor: '#f1f1f1'}}>
+                <div className="row row-content" style={{backgroundColor: '#f1f1f1', borderRadius: 3}}>
                         {project}
                 </div>
             </div>
