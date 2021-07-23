@@ -6,6 +6,7 @@ import Contact from './ContactComponent';
 import Footer from './FooterComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { actions } from  'react-redux-form';
 import { fetchProjects } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
@@ -15,7 +16,8 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    fetchProjects: () => (fetchProjects())
+    fetchProjects: () => (fetchProjects()),
+    resetMessageForm: () => (actions.reset('messageForm'))
 };
 
 class Main extends Component {
@@ -34,7 +36,7 @@ class Main extends Component {
                     projectsLoading={this.props.projects.isLoading}
                     projectsErrMess={this.props.projects.errMess}
                     />} />
-                    <Route exact path='/contact' component={Contact} />
+                    <Route exact path='/contact' render={() => <Contact resetMessageForm={this.props.resetMessageForm} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
