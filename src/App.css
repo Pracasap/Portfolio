@@ -25,13 +25,14 @@ h3 {
     font-size: 40px !important;
 }
 
+h5, h6 {
+    color: #fff;
+}
+
 #homeH4 {
     color: rgb(254, 189, 107);
     font-size: 23px !important;
-}
-
-h5, h6 {
-    color: #fff;
+    text-transform: uppercase;
 }
 
 .homeParagraph {
@@ -106,7 +107,7 @@ button[type=reset]:active  {
 
 
 .home {
-    min-height: 100vh;
+    min-height: 88.7vh;
     width: 100%;
     display: grid;
     background-color: rgb(28, 31, 45);;
@@ -121,7 +122,21 @@ button[type=reset]:active  {
 }
 
 .projects {
-    min-height: 100vh;
+    min-height: 88.7vh;
+    width: 100%;
+    display: grid;
+    background-color: rgb(28, 31, 45);;
+    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact {
+    min-height: 88.7vh;
     width: 100%;
     display: grid;
     background-color: rgb(28, 31, 45);;
@@ -192,14 +207,27 @@ button[type=reset]:active  {
         width: 90% !important;
         font-size: 18px;
     }
-
+    
     h1 {
         color: #fff;
         font-size: 60px !important;
         font-family: 'Kaushan Script';
     }
-
-    h4 {
+    .home {
+        min-height: 100vh !important;
+        width: 100%;
+        display: grid;
+        background-color: rgb(28, 31, 45);;
+        align-content: center;
+        background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
+        background-attachment: fixed;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    #homeH4 {
         color: rgb(254, 189, 107);
         font-size: 18px !important;
     }
@@ -218,11 +246,53 @@ button[type=reset]:active  {
 
 @media screen and (max-width: 768px) {
     .home {
-        min-height: 100vh;
+        min-height: 100vh !important;
+        width: 100%;
+        display: grid;
+        background-color: rgb(28, 31, 45);;
+        align-content:center;
+        padding-bottom: 20px;
+        background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
+        background-attachment: fixed;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+    }
+    .homeParagraph {
+        color: rgb(255, 255, 255) !important;
+        width: 100% !important;
+        font-size: px;
+        text-align: center;
+    }
+    h1 {
+        color: #fff;
+        font-size: 55px !important;
+        font-family: 'Kaushan Script';
+        text-align: center;
+    }
+    #homeH4 {
+        color: rgb(254, 189, 107);
+        font-size: 20px !important;
+        text-align: center !important;
+        text-transform: capitalize;
+    }
+    .mobileCenter {
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .home {
+        min-height: 100vh !important;
         width: 100%;
         display: grid;
         background-color: rgb(28, 31, 45);;
         align-content:flex-start;
+        padding-bottom: 20px;
         background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
         background-attachment: fixed;
         -o-background-size: cover;
@@ -235,5 +305,23 @@ button[type=reset]:active  {
         color: rgb(255, 255, 255) !important;
         width: 100% !important;
         font-size: 18px;
+        text-align: center;
+    }
+    h1 {
+        color: #fff;
+        font-size: 44px !important;
+        font-family: 'Kaushan Script';
+        text-align: center;
+    }
+    #homeH4 {
+        color: rgb(254, 189, 107);
+        font-size: 15px !important;
+        text-align: center !important;
+        text-transform: capitalize;
+    }
+    .mobileCenter {
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 }
