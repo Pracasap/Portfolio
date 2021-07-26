@@ -1,14 +1,29 @@
 import * as ActionTypes from './ActionTypes';
-import { PROJECTS } from '../shared/projects';
+import { baseUrl } from '../shared/baseUrl';
 
 export const fetchProjects = () => dispatch => {
 
     dispatch(projectsLoading());
 
-    setTimeout(() => {
-        dispatch(addProjects(PROJECTS))
-    }, 2000);
-}
+    return fetch(baseUrl + 'projects')
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+                    const error = new Error(`Error ${response.status}: ${response.statusText}`);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                const errMess = new Error(error.message);
+                throw errMess;
+            }
+        )
+        .then(response => response.json())
+        .then(projects => dispatch(addProjects(projects)))
+        .catch(error => dispatch(projectsFailed(error.message)));
+};
 
 export const projectsLoading = () => ({
     type: ActionTypes.PROJECTS_LOADING

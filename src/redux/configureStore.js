@@ -13,7 +13,7 @@ export const ConfigureStore = () => {
                 messageForm: InitialMessage
             })
         }),
-        applyMiddleware(thunk)
+        applyMiddleware(thunk, logger)
     );
 
     return store;
