@@ -38,3 +38,30 @@ export const addProjects = projects => ({
     type: ActionTypes.ADD_PROJECTS,
     payload: projects
 });
+
+
+export const postMessage = message => () => {
+    return fetch(baseUrl + 'message', {
+        method: "POST",
+        body: JSON.stringify(message),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(response => {
+            if (response.ok) {
+                return response;
+            } else {
+                const error = new Error(`Error ${response.status}: ${response.statusText}`);
+                throw error;          
+            }
+        },
+        error => { throw error; }
+    )
+    .then(response => response.json())
+    .then(response => alert(`Your message has been sent.\n${JSON.stringify(response)}`))
+    .catch(error => {
+        console.log('post message', error.messsage)
+        alert('Your message could not be posted\nError: ' + error.message);
+    });
+};
