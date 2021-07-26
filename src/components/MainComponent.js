@@ -33,14 +33,14 @@ class Main extends Component {
                 <Switch>
                     <Route path='/home' component={Home} />
                     <Route exact path='/projects' render={() => <Projects projects={this.props.projects.projects}
-                    projectsLoading={this.props.projects.isLoading}
-                    projectsErrMess={this.props.projects.errMess}
+                        projectsLoading={this.props.projects.isLoading}
+                        projectsErrMess={this.props.projects.errMess}
                     />} />
                     <Route exact path='/contact' render={() => <Contact resetMessageForm={this.props.resetMessageForm} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
-            </div>  
+            </div>
         );  
     };
 } 

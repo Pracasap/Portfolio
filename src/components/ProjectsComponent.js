@@ -22,17 +22,12 @@ function RenderIcons(prop) {
     return weblinks;
 }
 
-function RenderProjects({project, isLoading, errMess}) {
-    if (isLoading) {
-        return <Loading />;
-    }
-    if (errMess) {
-        return <h4>{errMess}</h4>
-    }
+const RenderProjects = ({project}) => {
+    
     return (
         <Card className="shadow">
             <div className="card-img-div">
-                <a href={project.website} target="_blank" rel="noreferrer"><img width="100%" src={project.image} alt={project.name} /></a>
+                <img width="100%" src={project.image} alt={project.name} />
             </div>
             <CardBody>
             <CardTitle>{project.name}</CardTitle>
@@ -47,19 +42,35 @@ function RenderProjects({project, isLoading, errMess}) {
 }
 
 function Projects(props) {
-
-    const project = props.projects.map(project => {
+    
+    const { projectsErrMess, projectsLoading } = props;
+    const projects = props.projects.map(project => {
         return (
             <div key={project.id} className="col-md-6 p-3">
-                <RenderProjects 
-                    project={project}
-                    isLoading={props.projectsLoading}
-                    errMess={props.projectsErrMess} 
-                />
+                <RenderProjects project={project} />
             </div>
         );
     });
-
+    
+    if (projectsLoading) {
+        return (
+            <div className="container-fluid projects">
+            <div className="container mb-5">
+                <div className="row">
+                    <div className="col mt-5 mb-3">
+                        <h2>Projects</h2>
+                    </div>
+                </div>
+                <div className="row row-content p-5" style={{backgroundColor: '#f1f1f1', borderRadius: 3}}>
+                        <Loading />
+                </div>
+            </div>
+        </div>
+        );
+    }
+    if (projectsErrMess) {
+        return <h4>{projectsErrMess}</h4>
+    }
     return (
         <div className="container-fluid projects">
             <div className="container mb-5">
@@ -69,7 +80,7 @@ function Projects(props) {
                     </div>
                 </div>
                 <div className="row row-content" style={{backgroundColor: '#f1f1f1', borderRadius: 3}}>
-                        {project}
+                        {projects}
                 </div>
             </div>
         </div>
