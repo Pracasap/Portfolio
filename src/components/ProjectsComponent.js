@@ -55,13 +55,18 @@ function Projects(props) {
     
     if (projectsLoading) {
         return (
-            <div className="container-fluid">
-                <div className="container p-5">
-                    <div className="row row-content p-5">
-                            <Loading />
+            <div className="container-fluid projects">
+            <div className="container mb-5">
+                <div className="row">
+                    <div className="col mt-5 mb-3">
+                        <h2>Projects</h2>
                     </div>
                 </div>
+                <div className="row row-content" style={{backgroundColor: '#f1f1f1', borderRadius: 3, minHeight: 350}}>
+                        <Loading />
+                </div>
             </div>
+        </div>
         );
     }
     if (projectsErrMess) {
