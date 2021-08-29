@@ -57,12 +57,7 @@ function Projects(props) {
         return (
             <div className="container-fluid projects">
             <div className="container mb-5">
-                <div className="row">
-                    <div className="col mt-5 mb-3">
-                        <h2>Projects</h2>
-                    </div>
-                </div>
-                <div className="row row-content" style={{backgroundColor: '#f1f1f1', borderRadius: 3, minHeight: 350}}>
+                <div className="row row-content" style={{minHeight: '70vh'}}>
                         <Loading />
                 </div>
             </div>
@@ -80,7 +75,7 @@ function Projects(props) {
                         <h2>Projects</h2>
                     </div>
                 </div>
-                <div className="row row-content" style={{backgroundColor: '#f1f1f1', borderRadius: 3}}>
+                <div className="row row-content" style={{backgroundColor: '#f1f1f1', borderRadius: 2}}>
                         {projects}
                 </div>
             </div>

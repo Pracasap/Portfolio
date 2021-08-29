@@ -7,7 +7,7 @@ function Footer(props) {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 copyright">
-                        <h6>© 2021 Coppyrights Prakash.com</h6>
+                        <h6>© 2021 Copyrights Prakash.com</h6>
                     </div>
                     <div className="col-md-6 social-links">
                         <a href="https://www.linkedin.com/in/prakashsapkota7/" target="_blank" rel="noreferrer">
