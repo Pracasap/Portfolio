@@ -5,21 +5,16 @@ import { baseUrl } from '../shared/baseUrl'
 
 function RenderIcons(prop) {
     let weblinks = [];
-    if (prop.project.website) {
-        const websiteLink = <a href={prop.project.website} target="_blank" rel="noreferrer"><ion-icon name="earth" /></a>;
-        weblinks.push(websiteLink);
-        weblinks.push(" ");
-    }
-    if (prop.project.github) {
-        const githubLink = <a href={prop.project.github} target="_blank" rel="noreferrer"><ion-icon name="logo-github" /></a>;
-        weblinks.push(githubLink);
-        weblinks.push(" ");
-    }
-    if (prop.project.codepen) {
-        const codepenLink = <a href={prop.project.codepen} target="_blank" rel="noreferrer"><ion-icon name="logo-codepen" /></a>;
-        weblinks.push(codepenLink);
-        weblinks.push(" ");
-    }
+    const webLinkKeys = ['website', 'github', 'codepen'];
+    const {project} = prop
+    
+    webLinkKeys.map((linkKey) => {
+        if (project[linkKey]) {
+            const icon = linkKey === 'website' ? 'earth': `logo-${linkKey}`
+            const link = <a href={prop.project[linkKey]} target="_blank" rel="noreferrer" style={{paddingRight: 10}}><ion-icon name={icon} /></a>;
+            weblinks.push(link)
+        }
+    })
     return weblinks;
 }
 

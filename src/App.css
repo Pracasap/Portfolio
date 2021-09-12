@@ -55,9 +55,7 @@ h5, h6 {
 .nav-link {
     font-weight: 600;
 }
-.nav-icon {
-    font-size: 55px !important;
-} 
+
 /* Buttons */
 .btn,
 .btn:link,
