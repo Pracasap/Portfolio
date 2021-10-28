@@ -278,23 +278,18 @@ button[type=reset]:active  {
         text-align: center !important;
         text-transform: capitalize;
     }
-    .mobileCenter {
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
-    }
 }
 
 @media screen and (max-width: 550px) {
     .home {
-        min-height: 100vh !important;
+        min-height: 85vh !important;
         width: 100%;
         display: grid;
         background-color: rgb(28, 31, 45);;
-        align-content:flex-start;
+        align-content: center;
         padding-bottom: 20px;
         background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.68) ), url(assets/images/background.jpeg);
-        background-attachment: fixed;
+        background-attachment:scroll;
         -o-background-size: cover;
         -moz-background-size: cover;
         -webkit-background-size: cover;
@@ -305,23 +300,18 @@ button[type=reset]:active  {
         color: rgb(255, 255, 255) !important;
         width: 100% !important;
         font-size: 18px;
-        text-align: center;
+        text-align: left;
     }
     h1 {
         color: #fff;
         font-size: 44px !important;
         font-family: 'Kaushan Script';
-        text-align: center;
+        text-align: left;
     }
     #homeH4 {
         color: rgb(254, 189, 107);
-        font-size: 15px !important;
-        text-align: center !important;
-        text-transform: capitalize;
-    }
-    .mobileCenter {
-        align-items: center !important;
-        justify-content: center !important;
-        text-align: center !important;
+        font-size: 25px !important;
+        text-align: left !important;
+        text-transform: capitalize !important;
     }
 }
